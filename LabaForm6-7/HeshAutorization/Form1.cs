@@ -82,7 +82,7 @@ namespace HeshAutorization
                     else if (Proverka(LoginReg, PasswordReg1) == false)
                     {
 
-                        PasswordReg1 = CreateMD5(PasswordReg1); //преобразуем хэш из массива в строку, состоящую из шестнадцатеричных символов в верхнем регистре
+                        PasswordReg1 = CreateMD5(PasswordReg1); 
 
                         string commandString = $"insert into tabl (логин, пароль, имя, фамилия, должность) values('{LoginReg}', '{PasswordReg1}', '{Name}', '{lastName}', '{post}')";
                         
